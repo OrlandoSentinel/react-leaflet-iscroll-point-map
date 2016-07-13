@@ -35,6 +35,8 @@ The info boxes have a default width of 200px and height of 195px. You might need
 
 We have the page header hard-coded in **/public/index.html** with embedded styles. This is for page performance and SEO.
 
+The map overlay with the "View map" button is for usability. It's annoying when you visit a page, scroll down and then accidentally move the map center to the middle of Antarctica. Here, the map is locked until a user is ready to use it.
+
 ## Stuff to do
 + Add arrows to the map that move it to the next point
 + Add a Key component that automatically builds a map key based on the GeoJSON
