@@ -62,10 +62,13 @@ export default class List extends Component {
 			const list_item =
 				<ListItem
 					updateStateFromChild={self.props.updateStateFromChild.bind(this)}
+					
+					//Switch these out with whatever information you want to appear in the info boxes
 					name={item.properties.name}
 					description={item.properties.description}
 					link={item.properties.link}
 					image={item.properties.image}
+					
 					index={i}
 					key={i}
 					ref={'item-' + i}
@@ -103,6 +106,7 @@ class ListItem extends Component {
 	render() {
 		const item_style = this.props.highlighted ? 'list__item--highlighted' : 'list__item--normal';
 		
+		//Customize the info box
 		return (
 			<div className={item_style}>
 				<h3 className='list__title'>{this.props.name}</h3>

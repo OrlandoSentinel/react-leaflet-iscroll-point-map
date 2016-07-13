@@ -26,6 +26,7 @@ export default class Map extends Component {
   	    this.map.keyboard.enable();
 	}
 	
+	//Adjust to style points based on GeoJSON feature properties
 	getPointColor(category) {
 		let color;
 	
