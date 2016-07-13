@@ -1,0 +1,64 @@
+{
+  "name": "react-leaflet-iscroll-point-map",
+  "version": "1.0.0",
+  "description": "Turn GeoJSON into a Leaflet map with mobile-friendly info boxes powered by iScroll",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npm run clean && NODE_ENV=development npm run start",
+    "prod": "BROWSERSLIST_CONFIG=./browserslist npm run clean && NODE_ENV=production webpack --config webpack.config.prod.js",
+    "clean": "rimraf -f public/**/build/*",
+    "lint": "eslint src",
+    "modernizr": "gulp modernizr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrlandoSentinel/react-leaflet-iscroll-point-map"
+  },
+  "author": "Andrew Gibson <atgibson@orlandosentinel.com>",
+  "bugs": {
+    "url": "https://github.com/OrlandoSentinel/react-leaflet-iscroll-point-map/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.3.15",
+    "babel-eslint": "^5.0.0-beta4",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-react-transform": "^2.0.0-beta1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0",
+    "eslint-plugin-react": "^3.11.3",
+    "expose-loader": "^0.7.1",
+    "express": "^4.13.3",
+    "extract-text-webpack-plugin": "^0.9.1",
+    "file-loader": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^1.5.4",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.4.2",
+    "postcss-loader": "^0.9.1",
+    "react-transform-catch-errors": "^1.0.0",
+    "react-transform-hmr": "^1.0.1",
+    "redbox-react": "^1.0.1",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "uglify-save-license": "^0.4.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.9",
+    "webpack-dev-middleware": "^1.4.0",
+    "webpack-hot-middleware": "^2.6.0"
+  },
+  "dependencies": {
+    "iscroll": "^5.2.0",
+    "jquery": "^3.1.0",
+    "leaflet": "^0.7.7",
+    "modernizr": "^3.3.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-iscroll": "^1.0.2",
+    "webfontloader": "^1.6.24"
+  }
+}

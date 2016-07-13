@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        
+        <link rel="dns-prefetch" href="//static.chartbeat.com">
+		<link rel="dns-prefetch" href="//securepubads.g.doubleclick.net">
+		<link rel="preconnect" href="https://securepubads.g.doubleclick.net">
+		<link rel="dns-prefetch" href="//pubads.g.doubleclick.net">
+		<link rel="preconnect" href="//pubads.g.doubleclick.net">
+		<link rel="dns-prefetch" href="//www.googletagservices.com">
+		<link rel="dns-prefetch" href="//partner.googleadservices.com">
+		<link rel="dns-prefetch" href="//tpc.googlesyndication.com">
+		<link rel="dns-prefetch" href="//cm.g.doubleclick.net">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="This meta description should be roughly 160 characters">
+    	<meta name="keywords" content="Put 10-12 keywords in here as a comma-separated list">
+    	
+    	<!-- Facebook -->
+    	<meta property="og:title" content="Facebook title goes here">
+		<meta property="og:site_name" content="Orlando Sentinel">
+		<meta property="og:url" content="Production absolute URL goes here">
+		<meta property="og:description" content="Facebook teaser goes here">
+		<meta property="og:image" content="Facebook image absolute URL goes here"> <!-- should be 800x420 -->
+		<meta property="fb:app_id" content="460739237375885">
+		<meta property="og_type" content="article">
+		<meta property="article:publisher" content="https://www.facebook.com/orlandosentinel">
+		
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@orlandosentinel">
+		<meta name="twitter:creator" content="@orlandosentinel">
+		<meta name="twitter:title" content="Twitter title goes here">
+		<meta name="twitter:description" content="Twitter teaser goes here">
+		<meta name="twitter:img:src" content="Twitter image absolute URL goes here"> <!-- should be 560x300 -->
+		<meta name="twitter:url" content="Production absolute URL goes here">
+    
+        <title>Orlando Sentinel React-Leaflet-iScroll Map</title>
+        
+        <style>
+        	.header {
+				font-size: 10px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				-o-box-sizing: border-box;
+				box-sizing: border-box;
+				max-width: 900px;
+				padding: 0 15px;
+				margin: 10px auto 0 auto;
+			}
+
+				.header__headline {
+					font-family: Georgia, serif;
+					font-size: 2.6em;
+				}
+				@media screen and (min-width: 767px) {
+					.header__headline {
+						font-size: 5.2em;
+					}
+				}
+	
+				.header__timestamp {
+					font-family: Arial, Helvetica, sans-serif;
+					color: #666;
+					font-size: 1.2em;
+					margin-top: 10px;
+					text-transform: uppercase;
+				}
+				@media screen and (min-width: 767px) {
+					.header__timestamp {
+						font-size: 1.4em;
+					}
+				}
+	
+				.header__byline {
+					margin-top: 10px;
+					font-family: Georgia, serif;
+					font-size: 1.2em;
+				}
+				@media screen and (min-width: 767px) {
+					.header__byline {
+						font-size: 1.4em;
+					}
+				}
+	
+					.header__byline a:link,
+					.header__byline a:visited {
+						font-weight: bold;
+						text-decoration: none;
+						color: #E05504;
+					}
+		
+					.header__byline a:hover,
+					.header__byline a:active {
+						color: #E97F41;
+					}
+	
+				.header__social {
+					list-style: none;
+					text-align: center;
+					margin-top: 10px;
+				}
+		
+					.header__social li {
+						display: inline-block;
+					}
+		
+					.header__social:first-child {
+						margin-right: 5px;
+					}
+		
+						.header__social li a {
+							position: relative;
+							color: transparent;
+							text-decoration: none;
+							display: block;
+							background-color: #009fda;
+							border-radius: 50%;
+							width: 25px;
+							height: 25px;
+						}
+						@media screen and (min-width: 767px) {
+							.header__social li a {
+								width: 35px;
+								height: 35px;
+							}
+						}
+			
+							.header__social li a svg {
+								position: absolute;
+								display: block;
+								top: 50%;
+								left: 50%;
+								width: 20px;
+								height: 20px;
+								margin-top: -10px;
+								margin-left: -10px;
+							}
+							@media screen and (min-width: 767px) {
+								width: 30px;
+								height: 30px;
+								margin-top: -15px;
+								margin-left: -15px;
+							}
+	
+				.header__subhed {
+					font-family: Georgia, serif;
+					font-size: 1.4em;
+					line-height: 140%;
+					color: #222;
+					margin-top: 10px;
+				}
+				@media screen and (min-width: 767px) {
+					.header__subhed {
+						font-size: 1.8em;
+					}
+				}
+        </style>
+        
+        <link rel="icon" type="image/png" href="./images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./css/build/app.css">
+        
+        <!--<script src="js/modernizr.js"></script>-->
+        <script>
+        	/*
+        		Fill in your Modernizr redirect tests here. Example:
+        		
+        		if (!Modernizr.svg || !Modernizr.csscalc) {
+        			window.location.href = 'http://browsehappy.com/';
+        		}
+        	*/
+        </script>
+        
+        <!-- Omniture -->
+        <script>
+			((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {
+				pageName: 'os:news:name-of-project:os:interactive:dataproject.',
+				channel: 'news',
+				server: 'interactive.orlandosentinel.com',
+				hier1: 'orlandosentinel:news',
+				hier2: 'news',
+				prop1: 'D=pageName',
+				prop2: 'news',
+				prop38: 'dataproject',
+				prop57: 'D=c38',
+				eVar20: 'orlandosentinel',
+				eVar21: 'D=c38',
+				eVar34: 'D=ch',
+				eVar35: 'D=pageName',
+				events:''
+			});
+		</script>
+    </head>
+    
+    <!-- Make sure to fix the ad path here -->
+    <body data-ad-path="/4011/trb.orlandosentinel/news" data-ad-ptype="sf" data-ad-iframe-url="/ad-iframe.html">
+        <script src="http://www.orlandosentinel.com/thirdpartyservice" async></script>
+        <div data-trb-thirdpartynav id="third-party"></div>
+    	
+    	<svg style="display:none;">
+			<symbol viewBox="5 5 30 30" id="icon-facebook">
+				<title>facebook</title> 
+				<path fill="#FFFFFF" d="M17.479,16.539h-2.096v3.42h2.096V30h4.027V19.915h2.81l0.296-3.374h-3.105c0,0,0-1.263,0-1.925
+				c0-0.793,0.16-1.114,0.93-1.114c0.624,0,2.182,0,2.182,0V10c0,0-2.297,0-2.787,0c-2.998,0-4.346,1.319-4.346,3.844
+				C17.479,16.048,17.479,16.539,17.479,16.539z"/> 
+			</symbol>
+	
+			<symbol viewBox="5 5 30 30" id="icon-twitter">
+				<title>twitter</title> 
+				<path fill="#FFFFFF" d="M30,13.807c-0.737,0.327-1.525,0.548-2.356,0.643c0.844-0.511,1.499-1.311,1.802-2.269
+				c-0.794,0.473-1.67,0.813-2.602,0.995c-0.75-0.794-1.815-1.298-2.993-1.298c-2.646,0-4.595,2.47-3.994,5.034
+				c-3.409-0.17-6.435-1.802-8.457-4.284c-1.071,1.841-0.555,4.253,1.266,5.476c-0.674-0.019-1.305-0.208-1.859-0.511
+				c-0.044,1.904,1.318,3.68,3.289,4.072c-0.579,0.156-1.209,0.195-1.853,0.068c0.523,1.633,2.035,2.818,3.832,2.848
+				c-1.727,1.348-3.895,1.953-6.074,1.701c1.815,1.166,3.97,1.84,6.289,1.84c7.61,0,11.915-6.433,11.657-12.198
+				C28.759,15.35,29.451,14.632,30,13.807z"/> 
+			</symbol>
+		</svg>
+		
+		<!-- Leaderboard -->
+		<div class="advert advert--leaderboard" data-ad-type="leaderboard"></div>
+		
+		<!-- Header -->
+		<header class="header">
+    		<!-- Make sure to change headline -->
+    		<h1 class="header__headline">Relatively average length headline for an interactive project</h1>
+    		
+    		<!-- Make sure to change timestamp -->
+    		<p class="header__timestamp">July 10, 2016, 2:45 pm</p>
+    		
+    		<!-- Make sure to change bylines -->
+    		<p class="header__byline">By <a href="http://www.orlandosentinel.com/os-andrew-gibson-bio-20140716-staff.html">Andrew Gibson</a> and <a href="http://www.orlandosentinel.com/os-charles-minshew-bio-20140716-staff.html">Charles Minshew</a>, Orlando Sentinel</p>
+    		
+    		<!-- Make sure to add social sharing URLs -->
+    		<ul class="header__social">
+				<li>
+					<a target="_blank" href="">
+						<svg>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+						</svg>
+					</a>
+				</li>
+	
+				<li>
+					<a target="_blank" href="">
+						<svg>
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+						</svg>
+					</a>
+				</li>
+			</ul>
+    		
+    		<!-- Make sure to change chatter -->
+    		<h2 class="header__subhed">Here go a few sentences in which you explain why this interactive is awesome and where the data come from.</h2>
+    	</header>
+        
+        <!-- React root component attaches here -->
+        <div id="root"></div>
+    </body>
+    
+    <!-- Webpack-produced bundle -->
+    <script src="./js/build/bundle.js"></script>
+    
+    <!-- Ads (make sure to change ad path) -->
+    <!--<script src="http://s3.amazonaws.com/media.apps.chicagotribune.com/ads/v2.1.4/ads.min.js"></script>
+	<script type='text/javascript'>
+		var gptadslots=[];
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function(){
+			var gads = document.createElement('script');
+			gads.async = true;
+			gads.type = 'text/javascript';
+			var useSSL = 'https:' == document.location.protocol;
+			gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+			var node = document.getElementsByTagName('script')[0];
+			node.parentNode.insertBefore(gads, node);
+		})();
+		googletag.cmd.push(function() {
+			gptadslots[0] = googletag.defineOutOfPageSlot(
+				'/4011/trb.orlandosentinel/weather',
+				'div-gpt-ad-863751094819497224-1').addService(googletag.pubads());
+			googletag.pubads().setTargeting('ptype',['sf']);
+			googletag.pubads().enableAsyncRendering();
+			googletag.enableServices();
+		});
+	</script>-->
+	
+	<!-- Chartbeat -->
+	<script type='text/javascript'>
+		var _sf_async_config={};
+		/** CONFIGURATION START **/
+		_sf_async_config.useCanonical = true;
+		_sf_async_config.uid = 45523;
+		_sf_async_config.domain = 'orlandosentinel.com';
+		_sf_async_config.sections = '';
+		_sf_async_config.authors = '';
+		/** CONFIGURATION END **/
+		(function(){
+		function loadChartbeat() { window._sf_endpt=(new Date()).getTime(); var e = document.createElement('script'); e.setAttribute('language', 'javascript'); e.setAttribute('type', 'text/javascript'); e.setAttribute('src', (('https:' == document.location.protocol) ? 'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/' : 'http://static.chartbeat.com/') + 'js/chartbeat.js'); document.body.appendChild(e); }
+		var oldonload = window.onload;
+		window.onload = (typeof window.onload != 'function') ?
+		loadChartbeat : function() { oldonload(); loadChartbeat(); };
+		})();
+	</script>
+</html>

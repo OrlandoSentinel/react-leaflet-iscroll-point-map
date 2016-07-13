@@ -1,0 +1,13 @@
+.advert {
+	margin: 10px auto 0 auto;
+	
+	&--leaderboard {
+		width: 320px;
+		height: 50px;
+		
+		@media screen and (min-width: 784px) {
+			width: 728px;
+			height: 90px;
+		}
+	}
+}

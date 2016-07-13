@@ -1,0 +1,18 @@
+.map-list {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+	
+	@include mq(desktop) {
+		height: 100%;
+		width: 100%;
+		float: right;
+		border-right: 1px solid #DCDCDC;
+		border-left: 1px solid #DCDCDC;
+	}
+}
+
+@import 'map';
+@import 'list';

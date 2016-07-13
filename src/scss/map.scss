@@ -1,0 +1,104 @@
+.map {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	
+	@include mq(desktop) {
+		height: calc(100% - 215px);
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+	.map__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255,255,255,.8);
+		z-index: 1;
+		
+		&--visible {
+			@extend .map__overlay;
+			display: block;
+		}
+		
+		&--hidden {
+			@extend .map__overlay;
+			display: none;
+		}
+	}
+	
+		.map__view {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 150px;
+			height: 40px;
+			border: none;
+			border-radius: 3px;
+			color: #FFF;
+			background-color: #009fda;
+			font-size: 1.8em;
+			font-family: $sans;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+			
+			@include mq(desktop) {
+				width: 300px;
+				height: 80px;
+				font-size: 2.4em;
+				background-color: transparent;
+				border: 1px solid #009fda;
+				color: #009fda;
+			}
+			
+			&:active {
+				background-color: #0288b9;
+				
+				@include mq(desktop) {
+					background-color: #009fda;
+					color: #FFF;
+				}
+			}
+		}
+
+	.map__figure {
+		height: 350px;
+		
+		@include mq(tablet) {
+			height: 500px;
+		}
+		
+		@include mq(desktop) {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	
+		.map__date-label {
+			font-size: 14px !important;
+			background-color: rgba(255,255,255,.7);
+			color: #000;
+			font-family: $sans;
+			text-align: center;
+			font-weight: bold;
+			width: auto !important;
+			padding: 2px 0;
+		}
+	
+	.map__results {
+		position: static;
+		
+		&--visible {
+			@extend .map__results;
+			display: block;
+		}
+		
+		&--hidden {
+			@extend .map__results;
+			display: none;
+		}
+	}

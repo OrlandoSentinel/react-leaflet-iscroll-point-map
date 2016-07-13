@@ -1,0 +1,158 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing A",
+         "category": 1,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.39461517333984,
+          28.54049702626839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing B",
+        "category": 1,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.36165618896484,
+          28.54441777991869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing C",
+        "category": 1,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.33041381835938,
+          28.54441777991869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing D",
+        "category": 1,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.37641906738281,
+          28.5205894108141
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing E",
+        "category": 2,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.41349792480467,
+          28.564019358847883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing F",
+        "category": 2,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.41693115234375,
+          28.539592216240948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing G",
+        "category": 2,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.36302947998047,
+          28.569145323559233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing H",
+        "category": 2,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.32560729980469,
+          28.52722570044216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Testing I",
+        "category": 2,
+        "description": "Maybe you want to drop in a short description about the point",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "image": "http://loremflickr.com/200/100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.42208099365234,
+          28.506108783570472
+        ]
+      }
+    }
+  ]
+}

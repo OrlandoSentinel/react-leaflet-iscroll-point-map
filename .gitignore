@@ -1,0 +1,11 @@
+.*
+!.gitignore
+!.eslintrc
+!.babelrc
+
+npm-debug.log
+
+/node_modules/
+/bower_components/
+/public/**/build/*
+/public/js/modernizr.js

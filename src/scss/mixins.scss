@@ -1,0 +1,16 @@
+@mixin mq($bp) {
+   	@if $bp == tablet {
+     	@media (min-width: 768px) { @content; }
+  	}
+  	@else if $bp == desktop {
+     	@media (min-width: 1024px) { @content; }
+  	}
+}
+
+@mixin clearfix {
+  	&:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+  	}
+}
