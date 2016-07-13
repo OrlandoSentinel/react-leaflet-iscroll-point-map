@@ -4,17 +4,17 @@ It's responsive and fast-loading. It's easily customizable. It's a work in progr
 ## Technology
 + Derives from this [React template](https://github.com/OrlandoSentinel/react-webpack-single-page-app)
 + Node.js >= 4.2.0
-+ [React.js]
-+ [Leaflet.js]
-+ [iScroll.js]
-+ [React iScroll]
++ [React.js](https://facebook.github.io/react/)
++ [Leaflet.js](http://leafletjs.com/)
++ [iScroll.js](https://github.com/cubiq/iscroll)
++ [React iScroll](https://www.npmjs.com/package/react-iscroll)
 
 ## Prior knowledge recommended
-+ [Sass] and [BEM]
-+ Check out this [ES6 tutorial]
-+ Check out this [React tutorial]
-+ Check out these [Webpack demos]
-+ Watch all 24 hours of [this video]
++ [Sass](http://sass-lang.com/) and [BEM](http://getbem.com/introduction/)
++ Check out this [ES6 breakdown](https://github.com/lukehoban/es6features)
++ Check out this [React tutorial](https://facebook.github.io/react/docs/tutorial.html)
++ Check out these [Webpack demos](https://github.com/ruanyf/webpack-demos)
++ Watch all 24 hours of [this video](http://24hoursofhappy.com/)
 
 ## Getting started
 1. Download the repository
@@ -29,7 +29,7 @@ It's responsive and fast-loading. It's easily customizable. It's a work in progr
 10. Everything you need for production is now in the **/public/** directory.
 
 ## Notes
-We know there is a [Leaflet component]() for React. In a few attempts, we haven't found it as easy as just using plain Leaflet and attaching a map to the DOM. But we'll keep checking back.
+We know there is a [Leaflet component](https://github.com/PaulLeCam/react-leaflet) for React. In a few attempts, we haven't found it as easy as just using plain Leaflet and attaching a map to the DOM. But we'll keep checking back.
 
 The info boxes have a default width of 200px and height of 195px. You might need to adjust these in **/src/scss/_list.scss** if you add lots of stuff to each info box. Also note that the box width and margin between each box are used in **/src/components/List.js** to calculate the width of the iScroll slider. If you need to change them, look for the variables in **/src/constants.js**.
 
