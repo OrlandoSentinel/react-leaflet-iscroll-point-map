@@ -9,8 +9,8 @@ It's responsive and fast-loading. It's easily customizable. It's a work in progr
 + [iScroll.js]
 + [React iScroll]
 
-## Prior knowledge needed
-+ [Sass]
+## Prior knowledge recommended
++ [Sass] and [BEM]
 + Check out this [ES6 tutorial]
 + Check out this [React tutorial]
 + Check out these [Webpack demos]
@@ -31,7 +31,7 @@ It's responsive and fast-loading. It's easily customizable. It's a work in progr
 ## Notes
 We know there is a [Leaflet component]() for React. In a few attempts, we haven't found it as easy as just using plain Leaflet and attaching a map to the DOM. But we'll keep checking back.
 
-The info boxes have a default width of 200px and height of 195px. You might need to adjust these in **/src/scss/_list.scss** if you add lots of stuff to each info box. Also note that the box width and margin between each box are used in **/src/components/List.js** to calculate the width of the iScroll slider. If you need to change them, look for the variables at the top of the file.
+The info boxes have a default width of 200px and height of 195px. You might need to adjust these in **/src/scss/_list.scss** if you add lots of stuff to each info box. Also note that the box width and margin between each box are used in **/src/components/List.js** to calculate the width of the iScroll slider. If you need to change them, look for the variables in **/src/constants.js**.
 
 We have the page header hard-coded in **/public/index.html** with embedded styles. This is for page performance and SEO.
 
