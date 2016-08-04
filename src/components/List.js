@@ -112,7 +112,7 @@ class ListItem extends Component {
 				<h3 className='list__title'>{this.props.name}</h3>
 				<p className='list__description'>{this.props.description}</p>
 				<a target='_blank' href={this.props.link} className='list__link'>Maybe you want a link</a>
-				<img src={this.props.image} className='list__image' />
+				<img className='list__image' src={require('../../assets/images/' + this.props.image)} />
 			</div>
 		);
 	}

@@ -37,6 +37,8 @@ We have the page header hard-coded in **/public/index.html** with embedded style
 
 The map overlay with the "View map" button is for usability. It's annoying when you visit a page, scroll down and then accidentally move the map center to the middle of Antarctica. Here, the map is locked until a user is ready to use it.
 
+If you're including images in the info boxes, only put the file name in the GeoJSON. The path goes in the image source in **/src/components/List.js**. This is so Webpack doesn't freak out.
+
 ## Stuff to do
 + Add arrows to the map that move it to the next point
 + Add a Key component that automatically builds a map key based on the GeoJSON

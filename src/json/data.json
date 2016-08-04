@@ -8,7 +8,7 @@
          "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -25,7 +25,7 @@
         "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -42,7 +42,7 @@
         "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -59,7 +59,7 @@
         "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -76,7 +76,7 @@
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -93,7 +93,7 @@
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -110,7 +110,7 @@
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -127,7 +127,7 @@
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
@@ -144,7 +144,7 @@
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "image": "http://loremflickr.com/200/100"
+        "image": "placeholder.png"
       },
       "geometry": {
         "type": "Point",
