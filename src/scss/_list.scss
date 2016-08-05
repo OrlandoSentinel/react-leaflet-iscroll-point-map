@@ -49,7 +49,7 @@
 			border-bottom-left-radius: 5px;
 			border-bottom-right-radius: 5px;
 			text-align: center;
-			font-family: $sans;
+			font-family: $font-controls;
 			
 			&--normal {
 				@extend .list__item;
@@ -68,6 +68,7 @@
 		
 			.list__title {
 				font-size: 2em;
+				font-weight: 700;
 				background-color: #222;
 				border-top-left-radius: 5px;
 				border-top-right-radius: 5px;
@@ -82,6 +83,7 @@
 			
 				.list__description {
 					font-size: 1.2em;
+					font-weight: 300;
 					color: #222;
 				}
 				
@@ -90,8 +92,9 @@
 					margin: 5px auto 0 auto;
 					width: 90px;
 					height: 25px;
-					background-color: #151150;
+					background-color: $control-blue;
 					font-size: 1.2em;
+					font-weight: 700;
 					color: #FFF;
 					border: none;
 					border-radius: 2px;
@@ -103,6 +106,7 @@
 					color: blue;
 					display: block;
 					font-size: 1.2em;
+					font-weight: 300;
 				}
 			
 				.list__image {

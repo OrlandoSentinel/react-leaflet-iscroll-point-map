@@ -16,13 +16,15 @@
 		right: 5px;
 		bottom: 5px;
 		z-index: 1;
-		background-color: #151150;
+		background-color: $control-blue;
 		color: #FFF;
 		width: 110px;
 		height: 30px;
 		border: none;
 		border-radius: 2px;
 		font-size: 1.2em;
+		font-family: $font-controls;
+		font-weight: 700;
 		opacity: .85;
 		cursor: pointer;
 		
@@ -50,7 +52,7 @@
 			font-size: 14px !important;
 			background-color: rgba(255,255,255,.7);
 			color: #000;
-			font-family: $sans;
+			font-family: $font-main-sans;
 			text-align: center;
 			font-weight: bold;
 			width: auto !important;
