@@ -110,9 +110,11 @@ class ListItem extends Component {
 		return (
 			<div className={item_style}>
 				<h3 className='list__title'>{this.props.name}</h3>
-				<p className='list__description'>{this.props.description}</p>
-				<a target='_blank' href={this.props.link} className='list__link'>Maybe you want a link</a>
-				<img className='list__image' src={require('../../assets/images/' + this.props.image)} />
+				<div className='list__inner'>
+					<p className='list__description'>{this.props.description}</p>
+					<a target='_blank' href={this.props.link} className='list__link'>Maybe you want a link</a>
+					<img className='list__image' src={require('../../assets/images/' + this.props.image)} />
+				</div>
 			</div>
 		);
 	}
