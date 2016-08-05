@@ -50,6 +50,8 @@ export default class Map extends Component {
 					fillColor: self.getPointColor(feature.properties.category),
 					fillOpacity: .8,
 					weight: 0,
+					opacity: .9,
+					color: '#222',
 					radius: 15
 				});
 			},
@@ -70,19 +72,19 @@ export default class Map extends Component {
 	
 	highlightPoint() {
 		this.group.setStyle({
-			fillOpacity: .3
+			weight: 0
 		});
 		
 		const target = this.group.getLayers()[this.props.index];
 		
 		target.setStyle({
-			fillOpacity: .8
+			weight: 5
 		});
 	}
 	
 	resetHighlight() {
 		this.group.setStyle({
-			fillOpacity: .8
+			weight: 0
 		});
 	}
 	
