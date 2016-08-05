@@ -1,7 +1,7 @@
 .list {
 	margin-top: 10px;
 	font-size: 1em;
-	height: 215px !important;
+	height: 245px !important;
 	cursor: move;
 	cursor: -webkit-grab;
 	cursor: -moz-grab;
@@ -43,7 +43,7 @@
 		.list__item {
 			float: left;
 			width: 200px;
-			height: 195px;
+			height: 225px;
 			box-sizing: border-box;
 			margin-left: 20px;
 			border-bottom-left-radius: 5px;
@@ -83,6 +83,19 @@
 				.list__description {
 					font-size: 1.2em;
 					color: #222;
+				}
+				
+				.list__button {
+					display: block;
+					margin: 5px auto 0 auto;
+					width: 90px;
+					height: 25px;
+					background-color: #151150;
+					font-size: 1.2em;
+					color: #FFF;
+					border: none;
+					border-radius: 2px;
+					cursor: pointer;
 				}
 			
 				.list__link {

@@ -29,13 +29,8 @@ export default class List extends Component {
 	}
 	
 	componentDidUpdate(prev_props, prev_state) {
-		if (this.props.index !== null) {
+		if (this.props.index !== null && !this.props.focus_on_point) {
 			this.scrollToItem(this.props.index);
-		
-		} else if (this.props.data !== prev_props.data) {
-			this.scrollToBeginning();
-			this.emptyDOMReferences();
-			this.storeDOMReferences();
 		}
 	}
 	
@@ -61,7 +56,7 @@ export default class List extends Component {
 		const items = this.props.data.features.map(function(item, i){
 			const list_item =
 				<ListItem
-					updateStateFromChild={self.props.updateStateFromChild.bind(this)}
+					updateStatesFromChild={self.props.updateStatesFromChild.bind(this)}
 					
 					//Switch these out with whatever information you want to appear in the info boxes
 					name={item.properties.name}
@@ -100,7 +95,10 @@ class ListItem extends Component {
 	}
 	
 	viewOnMap(e) {
-		this.props.updateStateFromChild('index', this.props.index);
+		this.props.updateStatesFromChild({
+			index: this.props.index,
+			focus_on_point: true
+		});
 	}
 	
 	render() {
@@ -112,6 +110,7 @@ class ListItem extends Component {
 				<h3 className='list__title'>{this.props.name}</h3>
 				<div className='list__inner'>
 					<p className='list__description'>{this.props.description}</p>
+					<button className='list__button' onClick={this.viewOnMap.bind(this)}>View on map</button>
 					<a target='_blank' href={this.props.link} className='list__link'>Maybe you want a link</a>
 					<img className='list__image' src={require('../../assets/images/' + this.props.image)} />
 				</div>

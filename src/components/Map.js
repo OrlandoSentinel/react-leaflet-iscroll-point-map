@@ -7,10 +7,8 @@ export default class Map extends Component {
 	constructor(props) {
 		super(props);
 		
-		this.initial = true;
-		
 		this.state = {
-			is_active: false
+			can_move: false
 		};
 	}
 	
@@ -70,6 +68,34 @@ export default class Map extends Component {
 		});
 	}
 	
+	toggleMapMove() {
+		this.setState({
+			can_move: !this.state.can_move
+		});
+	}
+	
+	disableMapMove() {
+		this.map.touchZoom.disable();
+		this.map.dragging.disable();
+		this.map.doubleClickZoom.disable();
+		this.map.scrollWheelZoom.disable();
+		this.map.keyboard.disable();
+	}
+	
+	enableMapMove() {
+		this.map.touchZoom.enable();
+		this.map.dragging.enable();
+		this.map.doubleClickZoom.enable();
+		this.map.scrollWheelZoom.enable();
+		this.map.keyboard.enable();
+	}
+	
+	focusOnPoint() {
+		const target = this.group.getLayers()[this.props.index];
+		
+		this.map.setView( target.getLatLng(), 15);
+	}
+	
 	resetHighlight() {
 		this.group.setStyle({
 			weight: 0
@@ -77,33 +103,50 @@ export default class Map extends Component {
 	}
 	
 	mapClick() {
-		this.props.updateStateFromChild('index', null);
+		this.props.updateStatesFromChild({
+			index: null,
+			focus_on_point: false
+		});
 	}
 	
 	pointClick(e) {
 		const target = e.target;
 		
-		this.props.updateStateFromChild('index', target.feature.properties.index);
+		this.props.updateStatesFromChild({
+			index: target.feature.properties.index,
+			focus_on_point: false
+		});
 		
 		target.bringToFront();
 	}
 	
 	componentDidUpdate(prev_props, prev_state) {
-		if (this.initial) {
-			this.initial = false;
-			
+		if (this.state.can_move) {
+			this.enableMapMove();
+		
 		} else {
-			if (this.props.index === null) {
-				this.resetHighlight();
-				
-			} else {
-				this.highlightPoint();
+			this.disableMapMove();
+		}
+		
+		if (this.props.index === null) {
+			this.resetHighlight();
+		
+		} else {
+			if (this.props.focus_on_point) {
+				this.focusOnPoint();
 			}
+			
+			this.highlightPoint();
 		}
 	}
 	
 	componentDidMount() {
 		const self = this;
+		
+		const bounds = L.latLngBounds(
+			L.latLng(22.316684, -88.057872),
+			L.latLng(31.990344, -75.291167)
+		);
         
         const map = this.map = L.map(this.refs.map, {
             zoomControl: false,
@@ -112,12 +155,22 @@ export default class Map extends Component {
             doubleClickZoom: false,
             scrollWheelZoom: false,
             keyboard: false,
-            tap: false
+            tap: false,
+            zoomAnimation: true,
+            animate: true,
+			zoomAnimationThreshold: 9909,
+			maxBounds: bounds,
+			minZoom: 6,
+			attributionControl: false
         });
         
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
+		
+		L.control.attribution({
+        	position: 'topleft'
+        }).addTo(this.map);
         
         this.map.on('click', function(e){
         	self.mapClick();
@@ -127,8 +180,11 @@ export default class Map extends Component {
 	}
 	
 	render() {
+		const button_text = this.state.can_move ? 'Disable pan/zoom' : 'Enable pan/zoom';
+	
 		return (
 			<div className='map'>
+				<button className='map__pan-zoom' onClick={this.toggleMapMove.bind(this)}>{button_text}</button>
 				<div className='map__figure' id='map' ref='map'></div>
 			</div>
 		);

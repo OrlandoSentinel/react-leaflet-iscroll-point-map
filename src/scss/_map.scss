@@ -4,12 +4,34 @@
 	z-index: 1;
 	
 	@include mq(desktop) {
-		height: calc(100% - 215px);
+		height: calc(100% - 245px);
 		position: absolute;
 		left: 0;
 		top: 0;
 	}
 }
+
+	.map__pan-zoom {
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		z-index: 1;
+		background-color: #151150;
+		color: #FFF;
+		width: 110px;
+		height: 30px;
+		border: none;
+		border-radius: 2px;
+		font-size: 1.2em;
+		opacity: .85;
+		cursor: pointer;
+		
+		@include mq(tablet) {
+			font-size: 1.4em;
+			width: 140px;
+			bottom: 10px;
+		}
+	}
 
 	.map__figure {
 		height: 350px;

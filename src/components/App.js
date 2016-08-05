@@ -11,14 +11,13 @@ export default class App extends Component {
 		
 		this.state = {
 			data: require('../json/data.json'),
-			index: null
+			index: null,
+			focus_on_point: false
 		};
 	}
 	
-	updateStateFromChild(key, val) {
-		this.setState({
-			[key]: val
-		});
+	updateStatesFromChild(obj) {
+		this.setState(obj);
 	}
 	
 	render() {
@@ -28,13 +27,15 @@ export default class App extends Component {
 					<Map
 						data={this.state.data}
 						index={this.state.index}
-						updateStateFromChild={this.updateStateFromChild.bind(this)}
+						focus_on_point={this.state.focus_on_point}
+						updateStatesFromChild={this.updateStatesFromChild.bind(this)}
 					/>
 					
 					<List
 						data={this.state.data}
 						index={this.state.index}
-						updateStateFromChild={this.updateStateFromChild.bind(this)}
+						focus_on_point={this.state.focus_on_point}
+						updateStatesFromChild={this.updateStatesFromChild.bind(this)}
 					/>
 				</div>
 			</main>
