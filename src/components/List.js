@@ -83,7 +83,7 @@ export default class List extends Component {
 				iScroll={iScroll}
 				className='list'
 				ref='iScroll'
-				options={{mouseWheel: true, scrollbars: true, scrollX: true, scrollY: false, wheelHorizontal: true, eventPassthrough: true, fadeScrollbars: true}}>
+				options={{mouseWheel: false, scrollbars: true, fadeScrollbars: true, scrollX: true, scrollY: false, eventPassthrough: true}}>
 				<div style={{ width: (SLIDE_WIDTH + SLIDE_MARGIN) * this.props.data.features.length + SLIDE_MARGIN + 'px' }}>
 					<div className='list__items'>
 						{items}
