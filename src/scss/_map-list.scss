@@ -6,6 +6,7 @@
 	z-index: 1;
 	
 	@include mq(desktop) {
+		min-height: 800px;
 		height: 100%;
 		width: 100%;
 		float: right;
