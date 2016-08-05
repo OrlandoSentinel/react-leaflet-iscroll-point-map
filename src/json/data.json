@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing A",
+        "name": "Point A",
          "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -21,7 +21,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing B",
+        "name": "Point B",
         "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -38,7 +38,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing C",
+        "name": "Point C",
         "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -55,7 +55,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing D",
+        "name": "Point D",
         "category": 1,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -72,7 +72,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing E",
+        "name": "Point E",
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -89,7 +89,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing F",
+        "name": "Point F",
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -106,7 +106,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing G",
+        "name": "Point G",
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -123,7 +123,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing H",
+        "name": "Point H",
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -140,7 +140,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Testing I",
+        "name": "Point I",
         "category": 2,
         "description": "Maybe you want to drop in a short description about the point",
         "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
