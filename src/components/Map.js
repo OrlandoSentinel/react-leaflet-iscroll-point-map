@@ -14,18 +14,6 @@ export default class Map extends Component {
 		};
 	}
 	
-	enableMap() {
-		this.setState({
-			is_active: true
-		});
-		
-		this.map.touchZoom.enable();
-  	    this.map.dragging.enable();
-  	    this.map.doubleClickZoom.enable();
-  	    this.map.scrollWheelZoom.enable();
-  	    this.map.keyboard.enable();
-	}
-	
 	//Adjust to style points based on GeoJSON feature properties
 	getPointColor(category) {
 		let color;
@@ -139,14 +127,8 @@ export default class Map extends Component {
 	}
 	
 	render() {
-		const overlay_styles = this.state.is_active ? 'map__overlay--hidden' : 'map__overlay--visible';
-	
 		return (
 			<div className='map'>
-				<div className={overlay_styles}>
-					<button className='map__view' onClick={this.enableMap.bind(this)}>View map</button>
-				</div>
-
 				<div className='map__figure' id='map' ref='map'></div>
 			</div>
 		);
