@@ -10,6 +10,7 @@
     "lint": "eslint src",
     "modernizr": "gulp modernizr"
   },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/OrlandoSentinel/react-leaflet-iscroll-point-map"
