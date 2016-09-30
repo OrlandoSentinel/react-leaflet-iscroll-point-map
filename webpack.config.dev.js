@@ -42,12 +42,12 @@ module.exports = {
         
         {
             test: /\.css$/,
-            loader: 'style-loader!css-loader'
+            loader: 'style-loader!css-loader!postcss-loader'
         },
         
         {
             test: /\.scss$/,
-            loader: 'style-loader!css-loader?&importLoaders=1!postcss-loader!sass-loader'
+            loader: 'style-loader!css-loader?-autoprefixer&importLoaders=1!postcss-loader!sass-loader'
         },
         
         {
@@ -68,20 +68,6 @@ module.exports = {
   },
   
   postcss: function(){
-    return [
-        autoprefixer({ 
-            browsers: [
-                'Firefox >= 1',
-                'Chrome >= 1',
-                'Safari >= 5',
-                'Edge >= 1',
-                'IE >= 9',
-                'iOS >= 6',
-                'ChromeAndroid >= 1',
-                'FirefoxAndroid >= 1',
-                'Android >= 4'
-            ]
-        })
-    ];
+    return [autoprefixer];
   }
 };
